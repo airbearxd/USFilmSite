@@ -37,7 +37,7 @@
   }
 
   .left-box, .middle-box, .right-box {
-    background: #c0a079; 
+    background: hsl(33, 36%, 61%, 0.6); 
     border: 1px solid #a68a5f;
     border-radius: 0;
     padding: 16px;
@@ -49,6 +49,7 @@
   .middle-box { flex: 2; min-width: 300px; position: relative; }
   .right-box { flex: 0.7; min-width: 120px; display: flex; flex-direction: column; gap: 10px; }
 
+  /* Nav bar links */
   .nav-bar {
     display: flex;
     justify-content: center;
@@ -62,16 +63,22 @@
 
   .nav-bar a {
     padding: 6px 12px;
-    background: #c0a079;
-    border: 1px solid #a68a5f;
+    background: #d3ceb4;
+    border: 1px solid #a9a17e;
     border-radius: 0;
     text-align: center;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     color: black;
+    transition: background 0.2s;
   }
 
+  .nav-bar a:hover {
+    background: #c9c090;
+  }
+
+  /* Left & right box links */
   .left-box a, .right-box a {
     padding: 6px;
     background: #c0a079;
@@ -82,6 +89,11 @@
     text-decoration: none;
     color: black;
     display: block;
+    transition: background 0.2s;
+  }
+
+  .left-box a:hover, .right-box a:hover {
+    background: #b09060;
   }
 
 </style>
@@ -114,6 +126,7 @@
     </div>
 
     <div class="right-box">
+      <a href="#">DP REEL</a>
       <a href="#">UPDATES</a>
       <a href="#">EMAIL US</a>
       <a href="#">OUR ANGELS</a>
