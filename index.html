@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>US Film Site</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USFilmSite — Layout Prototype</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('backCamo.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  /* Top banner space */
+  .banner-space {
+    height: 200px; /* Placeholder banner */
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  /* Main content layout */
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 200px);
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    position: relative;
+  }
+
+  .left-box, .middle-box, .right-box {
+    background: #d2b48c; 
+    border: 1px solid #a68a5f;
+    border-radius: 0;
+    padding: 16px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .left-box { flex: 0.7; min-width: 120px; }
+  .middle-box { flex: 2; min-width: 300px; position: relative; }
+  .right-box { flex: 0.7; min-width: 120px; }
+
+  /* Nav tabs partially over middle box, in front */
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .nav-bar .nav-item {
+    padding: 6px 12px;
+    background: #d2b48c;
+    border: 1px solid #a68a5f;
+    border-radius: 0;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+</style>
 </head>
 <body>
+
+<!-- Banner placeholder -->
+<div class="banner-space">
+  <!-- banner image -->
+</div>
+
+<!-- Main content layout -->
+<div class="content-wrapper">
+
+  <div class="nav-bar">
+    <div class="nav-item">[Placeholder]</div>
+    <div class="nav-item">[Placeholder]</div>
+    <div class="nav-item">[Placeholder]</div>
+    <div class="nav-item">[Placeholder]</div>
+  </div>
+
+  <div class="content">
+    <div class="left-box">Left Content Frame</div>
+    <div class="middle-box">Middle Content Frame</div>
+    <div class="right-box">Right Content Frame</div>
+  </div>
+
+</div>
+
 </body>
 </html>
