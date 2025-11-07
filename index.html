@@ -37,7 +37,7 @@
   }
 
   .left-box, .middle-box, .right-box {
-    background: #d2b48c; 
+    background: #c0a079; 
     border: 1px solid #a68a5f;
     border-radius: 0;
     padding: 16px;
@@ -45,9 +45,9 @@
     box-sizing: border-box;
   }
 
-  .left-box { flex: 0.7; min-width: 120px; }
+  .left-box { flex: 0.7; min-width: 120px; display: flex; flex-direction: column; gap: 10px; }
   .middle-box { flex: 2; min-width: 300px; position: relative; }
-  .right-box { flex: 0.7; min-width: 120px; }
+  .right-box { flex: 0.7; min-width: 120px; display: flex; flex-direction: column; gap: 10px; }
 
   .nav-bar {
     display: flex;
@@ -60,14 +60,28 @@
     z-index: 10;
   }
 
-  .nav-bar .nav-item {
+  .nav-bar a {
     padding: 6px 12px;
-    background: #d2b48c;
+    background: #c0a079;
     border: 1px solid #a68a5f;
     border-radius: 0;
     text-align: center;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+
+  .left-box a, .right-box a {
+    padding: 6px;
+    background: #c0a079;
+    border: 1px solid #a68a5f;
+    border-radius: 0;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: block;
   }
 
 </style>
@@ -79,17 +93,31 @@
 <div class="content-wrapper">
 
   <div class="nav-bar">
-    <div class="nav-item">[Placeholder]</div>
-    <div class="nav-item">[Placeholder]</div>
-    <div class="nav-item">[Placeholder]</div>
-    <div class="nav-item">[Placeholder]</div>
-    <div class="nav-item">[Placeholder]</div>
+    <a href="#">LOOKBOOK</a>
+    <a href="#">CINEMATOGRAPHY</a>
+    <a href="#">SCENE</a>
+    <a href="#">PRODUCER LOGISTICS</a>
+    <a href="#">AURAL ENVIRONMENT</a>
   </div>
 
   <div class="content">
-    <div class="left-box">Left Content Frame</div>
-    <div class="middle-box">Middle Content Frame</div>
-    <div class="right-box">Right Content Frame</div>
+    <div class="left-box">
+      <a href="#">WELCOME IMAGE</a>
+      <a href="#">MEAT</a>
+      <a href="#">MEMBER SPEAK</a>
+      <a href="#">CAMEL CHAT</a>
+      <a href="#">KILL SHARE</a>
+    </div>
+
+    <div class="middle-box">
+      Middle Content Frame
+    </div>
+
+    <div class="right-box">
+      <a href="#">UPDATES</a>
+      <a href="#">EMAIL US</a>
+      <a href="#">OUR ANGELS</a>
+    </div>
   </div>
 
 </div>
