@@ -5,18 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CINEMATOGRAPHY — USFilmSite</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Include Army font locally */
+    @font-face {
+      font-family: 'Army';
+      src: url('army.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background: url('backCamo.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      font-family: 'Army', Arial, sans-serif;
+      color: black;
+    }
+
+    /* HOME button top-right */
+    .nav-bar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .nav-bar a {
+      font-family: 'Army', Arial, sans-serif;
+      padding: 6px 12px;
+      background: #d3ceb4;
+      border: 1px solid #a9a17e;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .nav-bar a:hover {
+      background: #c9c090;
+    }
+
+    /* Page content */
+    .page-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .page-center h1 {
+      margin: 0;
+      padding: 20px 0;
+      font-size: 3em;
+    }
+
+    /* Video wrapper with border in front */
+    .video-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .video-wrapper video {
+      display: block;
+      width: 500px;  /* slightly smaller */
+      height: 280px;
+      position: relative;
+      z-index: 1; /* video behind border */
+    }
+
+    .video-wrapper img.flag-border {
+      position: absolute;
+      top: -30px; /* bigger than before */
+      left: -30px;
+      width: calc(100% + 60px);
+      height: calc(100% + 60px);
+      z-index: 2; /* border in front */
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Nav bar -->
+  <!-- HOME button -->
   <div class="nav-bar">
     <a href="index.html">HOME</a>
   </div>
 
-  <!-- Page content placeholder -->
-  <div class="page-center" style="text-align:center; margin-top:40vh; color:white;">
+  <div class="page-center">
     <h1>CINEMATOGRAPHY</h1>
-    <p>Content placeholder — add your stuff here.</p>
+
+    <div class="video-wrapper">
+      <video src="dpreel.mp4" controls autoplay loop muted></video>
+      <img src="flagborder.png" alt="Flag Border" class="flag-border">
+    </div>
   </div>
 
 </body>
