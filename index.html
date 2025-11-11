@@ -5,10 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>USFilmSite — Layout Prototype</title>
 <style>
+  /* Include army.otf font */
+  @font-face {
+    font-family: 'Army';
+    src: url('army.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   html, body {
     margin: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Army', Arial, sans-serif;
     background: url('backCamo.png') no-repeat center center fixed;
     background-size: cover;
   }
@@ -79,6 +87,7 @@
     text-decoration: none;
     color: black;
     transition: background 0.2s;
+    font-family: 'Army', Arial, sans-serif;
   }
 
   .nav-bar a:hover {
@@ -97,6 +106,7 @@
     color: black;
     display: block;
     transition: background 0.2s;
+    font-family: 'Army', Arial, sans-serif;
   }
 
   .left-box a:hover, .right-box a:hover {
