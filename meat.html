@@ -5,18 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MEAT — USFilmSite</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: url('MEAT.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      font-family: 'ArmyFont', sans-serif;
+      color: black;
+    }
+
+    .nav-bar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .nav-bar a {
+      font-family: 'ArmyFont', sans-serif;
+      padding: 6px 12px;
+      background: #d3ceb4;
+      border: 1px solid #a9a17e;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .nav-bar a:hover {
+      background: #c9c090;
+    }
+
+    .page-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .page-center h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Nav bar -->
+  <!-- HOME button -->
   <div class="nav-bar">
     <a href="index.html">HOME</a>
   </div>
 
-  <!-- Page content placeholder -->
-  <div class="page-center" style="text-align:center; margin-top:40vh; color:white;">
+  <div class="page-center">
     <h1>MEAT</h1>
-    <p>Content placeholder — add your stuff here.</p>
   </div>
 
 </body>
