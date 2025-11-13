@@ -1,8 +1,6 @@
-/* Add this at the very top of your style.css */
 @font-face {
   font-family: 'ArmyFont';
   src: url('army.otf') format('opentype');
-  font-weight: normal;
   font-style: normal;
 }
 
@@ -14,10 +12,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  font-family: 'ArmyFont', sans-serif; /* Use the downloaded font */
+  font-family: 'ArmyFont', sans-serif;
 }
 
-/* Optional: enforce the font for all text elements */
 .left-box, .middle-box, .right-box, .nav-bar a, .left-box a, .right-box a {
   font-family: 'ArmyFont', sans-serif;
 }
