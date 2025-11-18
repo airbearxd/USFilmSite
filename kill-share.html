@@ -1,10 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KILL SHARE — USFilmSite</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @font-face {
+      font-family: 'Army';
+      src: url('army.otf') format('opentype');
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Army', Arial, sans-serif;
+      background: url('KILLSHARE.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    /* NAV BAR */
+    .nav-bar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .nav-bar a {
+      padding: 6px 12px;
+      background: #d3ceb4;
+      border: 2px solid #a9a17e;
+      text-decoration: none;
+      color: black;
+      font-family: 'Army', Arial, sans-serif;
+      transition: background 0.2s;
+      font-weight: normal;
+    }
+
+    .nav-bar a:hover {
+      background: #c9c090;
+    }
+
+    /* CENTER CONTENT */
+    .page-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    .page-center h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+
+    .page-center p {
+      font-size: 18px;
+      color: #e8e8e8;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+  </style>
 </head>
 <body>
 
@@ -13,8 +79,8 @@
     <a href="index.html">HOME</a>
   </div>
 
-  <!-- Page content placeholder -->
-  <div class="page-center" style="text-align:center; margin-top:40vh; color:white;">
+  <!-- Page content -->
+  <div class="page-center">
     <h1>KILL SHARE</h1>
     <p>Content placeholder — add your stuff here.</p>
   </div>
