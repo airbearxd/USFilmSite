@@ -22,10 +22,11 @@
     overflow-y: auto;
   }
 
-  .banner-space {
-    height: 200px;
+  /* BANNER */
+  .banner-img {
     width: 100%;
-    background-color: rgba(0,0,0,0.2);
+    height: auto;
+    display: block;
   }
 
   .content-wrapper {
@@ -41,7 +42,7 @@
     display: flex;
     gap: 12px;
     width: 80%;
-    align-items: stretch; /* makes heights match */
+    align-items: stretch;
   }
 
   .left-box, .middle-box, .right-box {
@@ -135,11 +136,12 @@
 </head>
 <body>
 
-<div class="banner-space"></div>
+<!-- TOP BANNER -->
+<img src="banner.gif" class="banner-img">
 
 <div class="content-wrapper">
 
-  <!-- TOP NAV BAR -->
+  <!-- NAV BAR -->
   <div class="nav-bar">
     <a href="lookbook.html">LOOKBOOK</a>
     <a href="cinematography.html">CINEMATOGRAPHY</a>
