@@ -163,6 +163,25 @@
     height: auto;
     border: 2px solid #a68a5f;
   }
+
+  .grenade-button {
+    position: absolute;
+    right: 30px;
+    top: -90px;
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+    z-index: 10;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .grenade-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+  }
 </style>
 </head>
 <body>
@@ -188,9 +207,15 @@
       <img src="HOME.gif" alt="Home">
     </a>
 
+    <a href="#" class="grenade-button" onclick="playGrenade()">
+      <img id="grenadeImg" src="grenade-frame1.png" alt="Grenade">
+    </a>
+
     <!-- LEFT BOX -->
     <div class="left-box">
       <div class="box-inner">
+        <n></n>
+        <n></n>
         <n></n>
         <n></n>
         <n></n>
@@ -235,6 +260,8 @@
         <n></n>
         <n></n>
         <n></n>
+        <n></n>
+        <n></n>
         <a href="crew.html">CREW</a>
         <a href="updates.html">UPDATES</a>
         <img src="NIGHT FIRE 1.gif" class="night-fire-gif">
@@ -247,5 +274,14 @@
   </div>
 </div>
 
+  <script>
+    function playGrenade() {
+      const img = document.getElementById('grenadeImg');
+      img.src = 'grenade.gif?' + new Date().getTime();
+      setTimeout(() => {
+        img.src = 'grenade-frame1.png';
+      }, 800);
+    }
+  </script>
 </body>
 </html>
