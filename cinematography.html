@@ -26,25 +26,26 @@
     overflow: hidden;
   }
 
-  .nav-bar {
+  .home-button {
     position: absolute;
+    left: 20px;
     top: 20px;
-    right: 20px;
-  }
-
-  .nav-bar a {
-    font-family: 'Army', Arial, sans-serif;
-    padding: 6px 12px;
-    background: #d3ceb4;
-    border: 1px solid #a9a17e;
-    text-decoration: none;
-    color: black;
+    width: 140px;
+    height: 140px;
     cursor: pointer;
-    transition: background 0.2s;
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    z-index: 20;
   }
 
-  .nav-bar a:hover {
-    background: #c9c090;
+  .home-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    outline: none;
+    background: transparent;
+    pointer-events: none;
   }
 
   .page-center {
@@ -88,9 +89,10 @@
 </head>
 <body>
 
-  <div class="nav-bar">
-    <a href="index.html">HOME</a>
-  </div>
+  <!-- HOME GIF BUTTON -->
+  <a href="index.html" class="home-button">
+    <img src="HOME.gif" alt="Home">
+  </a>
 
   <div class="page-center">
     <h1>CINEMATOGRAPHY</h1>

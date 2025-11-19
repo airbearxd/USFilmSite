@@ -43,6 +43,29 @@
     gap: 12px;
     width: 80%;
     align-items: stretch;
+    position: relative;
+  }
+
+  /* HOME BUTTON */
+  .home-button {
+    position: absolute;
+    left: 55px;
+    top: -80px;
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+  }
+
+  .home-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none; 
+    outline: none;
+    background: transparent;
+    pointer-events: none;
   }
 
   .left-box, .middle-box, .right-box {
@@ -83,12 +106,13 @@
     border: 2px solid #a9a17e;
     text-decoration: none;
     color: black;
-    transition: background 0.2s;
     
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    transition: background 0.2s;
   }
 
   .nav-bar a:hover { background: #c9c090; }
@@ -157,15 +181,22 @@
 
   <div class="content">
 
+    <!-- HOME GIF BUTTON -->
+    <a href="index.html" class="home-button">
+      <img src="HOME.gif" alt="Home">
+    </a>
+
     <!-- LEFT BOX -->
     <div class="left-box">
       <div class="box-inner">
         <n></n>
         <n></n>
+        <n></n>
+        <n></n>
         <a href="meat.html">MEAT</a>
         <a href="member-speak.html">MEMBER SPEAK</a>
         <img src="MANSUR INTERDICTION.gif" class="interdiction-gif">
-        <a href="camel-chat.html">CAMEL CHAT</a>
+        <a href="camel-chat.html">CHAT</a>
         <a href="kill-share.html">KILL SHARE</a>
       </div>
     </div>
@@ -173,6 +204,8 @@
     <!-- MIDDLE BOX -->
     <div class="middle-box">
       <div class="box-inner">
+        <n></n>
+        <n></n>
         <n></n>
         <n></n>
         <div class="middle-text">
@@ -198,11 +231,14 @@
       <div class="box-inner">
         <n></n>
         <n></n>
+        <n></n>
+        <n></n>
         <a href="crew.html">CREW</a>
         <a href="updates.html">UPDATES</a>
         <img src="NIGHT FIRE 1.gif" class="night-fire-gif">
         <a href="email-us.html">EMAIL US</a>
         <a href="our-angels.html">OUR ANGELS</a>
+        <a href="time.html">TIME</a>
       </div>
     </div>
 
