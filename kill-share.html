@@ -22,30 +22,28 @@
       overflow-x: hidden;
     }
 
-    /* NAV BAR */
-    .nav-bar {
+    .home-button {
       position: absolute;
+      left: 20px; 
       top: 20px;
-      right: 20px;
-      z-index: 10;
+      width: 140px;
+      height: 140px;
+      cursor: pointer;
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      z-index: 20;
     }
 
-    .nav-bar a {
-      padding: 6px 12px;
-      background: #d3ceb4;
-      border: 2px solid #a9a17e;
-      text-decoration: none;
-      color: black;
-      font-family: 'Army', Arial, sans-serif;
-      transition: background 0.2s;
-      font-weight: normal;
+    .home-button img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: none;
+      outline: none;
+      background: transparent;
+      pointer-events: none;
     }
 
-    .nav-bar a:hover {
-      background: #c9c090;
-    }
-
-    /* CENTER CONTENT */
     .page-center {
       position: absolute;
       top: 50%;
@@ -74,10 +72,10 @@
 </head>
 <body>
 
-  <!-- Nav bar -->
-  <div class="nav-bar">
-    <a href="index.html">HOME</a>
-  </div>
+  <!-- HOME GIF BUTTON -->
+  <a href="index.html" class="home-button">
+    <img src="HOME.gif" alt="Home">
+  </a>
 
   <!-- Page content -->
   <div class="page-center">
