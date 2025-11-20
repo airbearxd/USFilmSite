@@ -16,7 +16,7 @@
     margin: 0;
     height: 100%;
     font-family: 'Army', Arial, sans-serif;
-    background: url('backCamo.png') no-repeat center center fixed;
+    background: url('media/backCamo.png') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
     overflow-y: auto;
@@ -193,7 +193,7 @@
 <body>
 
 <!-- TOP BANNER -->
-<img src="banner.gif" class="banner-img">
+<img src="media/banner.gif" class="banner-img">
 
 <div class="content-wrapper">
 
@@ -210,11 +210,11 @@
 
     <!-- HOME GIF BUTTON -->
     <a href="index.html" class="home-button">
-      <img src="HOME.gif" alt="Home">
+      <img src="media/HOME.gif" alt="Home">
     </a>
 
     <a href="#" class="grenade-button" onclick="playGrenade()">
-      <img id="grenadeImg" src="grenade-frame1.png" alt="Grenade">
+      <img id="grenadeImg" src="media/grenade-frame1.png" alt="Grenade">
     </a>
 
     <!-- LEFT BOX -->
@@ -228,7 +228,7 @@
         <n></n>
         <a href="meat.html">MEAT</a>
         <a href="member-speak.html">MEMBER SPEAK</a>
-        <img src="MANSUR INTERDICTION.gif" class="interdiction-gif">
+        <img src="media/MANSUR INTERDICTION.gif" class="interdiction-gif">
         <a href="camel-chat.html">CHAT</a>
         <a href="kill-share.html">KILL SHARE</a>
       </div>
@@ -255,7 +255,7 @@
           Now what?
         </div>
 
-        <img src="middle1min.gif" alt="Middle content GIF">
+        <img src="media/middle1min.gif" alt="Middle content GIF">
       </div>
     </div>
 
@@ -270,7 +270,7 @@
         <n></n>
         <a href="crew.html">CREW</a>
         <a href="updates.html">UPDATES</a>
-        <img src="NIGHT FIRE 1.gif" class="night-fire-gif">
+        <img src="media/NIGHT FIRE 1.gif" class="night-fire-gif">
         <a href="email-us.html">EMAIL US</a>
         <a href="our-angels.html">OUR ANGELS</a>
         <a href="time.html">TIME</a>
@@ -283,9 +283,9 @@
   <script>
     function playGrenade() {
       const img = document.getElementById('grenadeImg');
-      img.src = 'grenade.gif?' + new Date().getTime();
+      img.src = 'media/grenade.gif?' + new Date().getTime();
       setTimeout(() => {
-        img.src = 'grenade-frame1.png';
+        img.src = 'media/grenade-frame1.png';
       }, 800);
     }
   </script>
