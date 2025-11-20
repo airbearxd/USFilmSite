@@ -1,22 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOOKBOOK — USFilmSite</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOOKBOOK - ShitFromTheSandbox</title>
+
+  <style>
+    @font-face {
+      font-family: 'Army';
+      src: url('army.otf') format('opentype');
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Army', Arial, sans-serif;
+      background: url('media/backCamo.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 20px; 
+      top: 20px;
+      width: 140px;
+      height: 140px;
+      cursor: pointer;
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      z-index: 20;
+    }
+
+    .home-button img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: none;
+      outline: none;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .page-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: black;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    .page-center h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+
+    .page-center p {
+      font-size: 18px;
+      color: black;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Nav bar -->
-  <div class="nav-bar">
-    <a href="index.html">HOME</a>
-  </div>
+  <!-- HOME GIF BUTTON -->
+  <a href="index.html" class="home-button">
+    <img src="media/HOME.gif" alt="Home">
+  </a>
 
-  <!-- Page content placeholder -->
-  <div class="page-center" style="text-align:center; margin-top:40vh; color:white;">
+  <!-- Page content -->
+  <div class="page-center">
     <h1>LOOKBOOK</h1>
-    <p>Content placeholder — add your stuff here.</p>
+    <p>Content placeholder — adding stuff here.</p>
   </div>
 
 </body>
