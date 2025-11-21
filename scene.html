@@ -15,9 +15,8 @@
 
     html, body {
       margin: 0;
-      height: 100%;
       font-family: 'Army', Arial, sans-serif;
-      background: url('media/backCamo.png') no-repeat center center fixed;
+      background: url('scenemedia/scenebg.png') no-repeat center center fixed;
       background-size: cover;
       overflow-x: hidden;
     }
@@ -45,28 +44,69 @@
     }
 
     .page-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin: 0 auto;
       text-align: center;
       color: black;
       width: 90%;
-      max-width: 700px;
+      max-width: 900px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
 
     .page-center h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+      font-size: 60px;
+      margin-top: 0px;
+      margin-bottom: 40px;
       letter-spacing: 2px;
       font-weight: normal;
+      color: white;
     }
 
     .page-center p {
       font-size: 18px;
-      color: black;
+      color: white;
       letter-spacing: 1px;
       font-weight: normal;
+    }
+
+    /* Video */
+    .page-center video {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin-bottom: 40px;
+      border: 2px solid black;
+    }
+
+    /* GIF grid */
+    .gif-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .gif-grid img {
+      width: 100%;
+      border: 2px solid black;
+    }
+
+    /* Single image at bottom */
+    .page-center .single-img {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border: 2px solid black;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    .page-center h2 {
+      font-size: 30px;
+      margin-bottom: 25px;
+      margin-top: 10px;
+      font-weight: normal;
+      color: white;
     }
   </style>
 </head>
@@ -80,7 +120,22 @@
   <!-- Page content -->
   <div class="page-center">
     <h1>SCENE</h1>
-    <p>Content placeholder — adding stuff here.</p>
+
+    <h2>PRE-VIS PITCH</h2>
+
+    <!-- Top video -->
+    <video src="scenemedia/previspitch.mp4" controls autoplay loop unmuted></video>
+
+    <!-- 2x2 GIF grid -->
+    <div class="gif-grid">
+      <img src="scenemedia/nerfscene.gif" alt="Nerf Scene">
+      <img src="scenemedia/beheading.gif" alt="Beheading">
+      <img src="media/MANSUR INTERDICTION.gif" alt="Mansur Interdiction">
+      <img src="scenemedia/nightfire2.gif" alt="Nightfire2">
+    </div>
+
+    <!-- Bottom image -->
+    <img src="scenemedia/Pitch -75.png" class="single-img" alt="Pitch -75">
   </div>
 
 </body>
