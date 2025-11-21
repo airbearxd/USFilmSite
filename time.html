@@ -22,6 +22,7 @@
       overflow-x: hidden;
     }
 
+    /* HOME BUTTON */
     .home-button {
       position: absolute;
       left: 20px; 
@@ -44,29 +45,32 @@
       pointer-events: none;
     }
 
+    /* CENTER CONTENT */
     .page-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin-top: 50px;
       text-align: center;
       color: black;
-      width: 90%;
-      max-width: 700px;
+      width: 100%;
     }
 
     .page-center h1 {
       font-size: 48px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       letter-spacing: 2px;
       font-weight: normal;
     }
 
-    .page-center p {
-      font-size: 18px;
-      color: black;
+    .page-center h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
       letter-spacing: 1px;
       font-weight: normal;
+    }
+
+    .schedule-img {
+      width: 90%;
+      max-width: 1000px;
+      border: 2px solid #a68a5f;
     }
   </style>
 </head>
@@ -77,10 +81,12 @@
     <img src="media/HOME.gif" alt="Home">
   </a>
 
-  <!-- Page content -->
+  <!-- PAGE CONTENT -->
   <div class="page-center">
     <h1>TIME</h1>
-    <p>Content placeholder — adding stuff here.</p>
+    <h2>SCHEDULE</h2>
+
+    <img src="timemedia/time.png" alt="Time Schedule" class="schedule-img">
   </div>
 
 </body>

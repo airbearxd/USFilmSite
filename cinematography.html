@@ -21,9 +21,10 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    align-items: flex-start;
+    min-height: 100vh; 
+    overflow-x: hidden;
+    overflow-y: auto; 
   }
 
   .home-button {
@@ -42,9 +43,6 @@
     width: 100%;
     height: auto;
     display: block;
-    border: none;
-    outline: none;
-    background: transparent;
     pointer-events: none;
   }
 
@@ -53,20 +51,22 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transform: translateY(-45px);
+    padding-top: 40px;
+    padding-bottom: 100px;
+    width: 100%;
   }
 
   .page-center h1 {
     margin: 0;
-    padding: 0;
     font-size: 3em;
-    font-weight: normal;
     margin-bottom: 40px;
+    font-weight: normal;
   }
 
   .video-wrapper {
     position: relative;
     display: inline-block;
+    margin-bottom: 60px;
   }
 
   .video-wrapper video {
@@ -85,6 +85,20 @@
     z-index: 2;
     pointer-events: none;
   }
+
+  .lookbook-img {
+    width: 92%;
+    max-width: 900px;
+    margin-bottom: 35px;
+    border: 2px solid #a68a5f;
+  }
+
+  .page-center h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: normal;
+  }
 </style>
 </head>
 <body>
@@ -96,10 +110,23 @@
 
   <div class="page-center">
     <h1>CINEMATOGRAPHY</h1>
+
     <div class="video-wrapper">
-      <video src="media/dpreel.mp4" controls autoplay loop muted></video>
+      <video src="media/dpreel.mp4" controls autoplay loop unmuted></video>
       <img src="media/flagborder.png" alt="Flag Border" class="flag-border">
     </div>
+
+    <h2>CAMERA VIEW</h2>
+
+    <img src="cinematographymedia/Pitch -56.png" class="lookbook-img">
+    <img src="cinematographymedia/Pitch -57.png" class="lookbook-img">
+    <img src="cinematographymedia/Pitch -58.png" class="lookbook-img">
+    <img src="cinematographymedia/Pitch -59.png" class="lookbook-img">
+    <img src="cinematographymedia/Pitch -60.png" class="lookbook-img">
+    <img src="cinematographymedia/Pitch -61.png" class="lookbook-img">
+    <img src="cinematographymedia/Pitch -62.png" class="lookbook-img">
+    <img src="cinematographymedia/Pitch -63.png" class="lookbook-img">
+
   </div>
 
 </body>
