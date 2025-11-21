@@ -1,87 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AURAL ENVIRONMENT - ShitFromTheSandbox</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURAL ENVIRONMENT - ShitFromTheSandbox</title>
 
-  <style>
-    @font-face {
-      font-family: 'Army';
-      src: url('army.otf') format('opentype');
-      font-style: normal;
-      font-weight: normal;
-    }
+<style>
+  @font-face {
+    font-family: 'Army';
+    src: url('army.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+  }
 
-    html, body {
-      margin: 0;
-      height: 100%;
-      font-family: 'Army', Arial, sans-serif;
-      background: url('media/backCamo.png') no-repeat center center fixed;
-      background-size: cover;
-      overflow-x: hidden;
-    }
+  html, body {
+    margin: 0;
+    font-family: 'Army', Arial, sans-serif;
+    background: url('media/backCamo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+    overflow-x: hidden;
+  }
 
-    .home-button {
-      position: absolute;
-      left: 20px; 
-      top: 20px;
-      width: 140px;
-      height: 140px;
-      cursor: pointer;
-      clip-path: circle(50% at 50% 50%);
-      -webkit-clip-path: circle(50% at 50% 50%);
-      z-index: 20;
-    }
+  .home-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    z-index: 20;
+  }
 
-    .home-button img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: none;
-      outline: none;
-      background: transparent;
-      pointer-events: none;
-    }
+  .home-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+  }
 
-    .page-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: black;
-      width: 90%;
-      max-width: 700px;
-    }
+  .page-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
 
-    .page-center h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-      font-weight: normal;
-    }
+  .page-center h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
 
-    .page-center p {
-      font-size: 18px;
-      color: black;
-      letter-spacing: 1px;
-      font-weight: normal;
-    }
-  </style>
+  .page-center h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+
+  .page-center h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: normal;
+  }
+
+  .slideshow {
+    position: relative;
+    width: 92%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 2px solid #a68a5f;
+  }
+
+  .slideshow img {
+    width: 100%;
+    display: none;
+  }
+
+  .slideshow img.active {
+    display: block;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: #c0a079;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.2s;
+  }
+
+  .arrow:hover {
+    background-color: #c0a079;
+    color: black;
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+
+  .single-img {
+    width: 92%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 2px solid #a68a5f;
+  }
+</style>
 </head>
 <body>
 
-  <!-- HOME GIF BUTTON -->
-  <a href="index.html" class="home-button">
-    <img src="media/HOME.gif" alt="Home">
-  </a>
+<!-- HOME GIF BUTTON -->
+<a href="index.html" class="home-button">
+  <img src="media/HOME.gif" alt="Home">
+</a>
 
-  <!-- Page content -->
-  <div class="page-center">
-    <h1>AURAL ENVIRONMENT</h1>
-    <p>Content placeholder — adding stuff here.</p>
+<div class="page-center">
+  <h1>AURAL ENVIRONMENT</h1>
+
+  <!-- Slideshow for auralenv1.png → auralenv37.png -->
+  <div class="slideshow" id="auralSlideshow">
+    <div class="arrow arrow-left" id="prevArrow">&#10094;</div>
+    <div class="arrow arrow-right" id="nextArrow">&#10095;</div>
   </div>
+
+  <img src="aemedia/Pitch -18.png" class="single-img">
+
+  <h2>LOCATIONS</h2>
+  <img src="aemedia/Pitch -31.png" class="single-img">
+
+  <h3>TREVOR'S HOUSE</h3>
+  <img src="aemedia/Pitch -33.png" class="single-img">
+  <img src="aemedia/Pitch -34.png" class="single-img">
+
+  <h3>SEAN'S ROOM</h3>
+  <img src="aemedia/Pitch -36.png" class="single-img">
+  <img src="aemedia/Pitch -37.png" class="single-img">
+
+  <h3>AARON'S ROOM</h3>
+  <img src="aemedia/Pitch -39.png" class="single-img">
+  <img src="aemedia/Pitch -40.png" class="single-img">
+
+  <h3>EXTERIOR OF COLTON'S HOUSE</h3>
+  <img src="aemedia/Pitch -42.png" class="single-img">
+
+  <h3>TREVOR'S HOUSE - DINNER TABLE</h3>
+  <img src="aemedia/Pitch -44.png" class="single-img">
+
+  <h3>TREVOR'S HOUSE - KITCHEN</h3>
+  <img src="aemedia/Pitch -46.png" class="single-img">
+  <img src="aemedia/Pitch -47.png" class="single-img">
+
+</div>
+
+<script>
+  const slideshowContainer = document.getElementById('auralSlideshow');
+
+  for (let i = 1; i <= 37; i++) {
+    const img = document.createElement('img');
+    img.src = `aemedia/auralenv${i}.png`;
+    if (i === 1) img.classList.add('active');
+    slideshowContainer.appendChild(img);
+  }
+
+  const slides = slideshowContainer.querySelectorAll('img');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+  }
+
+  document.getElementById('prevArrow').addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+  document.getElementById('nextArrow').addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+</script>
 
 </body>
 </html>
