@@ -20,6 +20,7 @@
       background: url('media/backCamo.png') no-repeat center center fixed;
       background-size: cover;
       overflow-x: hidden;
+      overflow-y: auto;
     }
 
     .home-button {
@@ -38,25 +39,29 @@
       width: 100%;
       height: auto;
       display: block;
-      border: none;
-      outline: none;
-      background: transparent;
       pointer-events: none;
     }
 
     .page-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      color: black;
-      width: 90%;
-      max-width: 700px;
+      padding: 30px 20px 100px 20px;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .page-center h1 {
-      font-size: 48px;
+      font-size: 60px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+
+    .page-center h2 {
+      font-size: 40px;
       margin-bottom: 20px;
       letter-spacing: 2px;
       font-weight: normal;
@@ -67,6 +72,23 @@
       color: black;
       letter-spacing: 1px;
       font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    .page-center video {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin-bottom: 40px;
+      border: 2px solid #a68a5f;
+    }
+
+    .page-center img {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin-bottom: 35px;
+      border: 2px solid #a68a5f;
     }
   </style>
 </head>
@@ -77,10 +99,20 @@
     <img src="media/HOME.gif" alt="Home">
   </a>
 
-  <!-- Page content -->
   <div class="page-center">
     <h1>PRODUCER LOGISTICS</h1>
-    <p>Content placeholder — adding stuff here.</p>
+
+    <h2>SYLVIA VIDEO</h2>
+
+    <!-- Video -->
+    <video src="plmedia/sylviavideo.mp4" controls autoplay loop unmuted></video>
+
+    <!-- Images -->
+    <img src="plmedia/Pitch  (1)-67.png" alt="Pitch 67">
+    <img src="plmedia/Pitch  (1)-68.png" alt="Pitch 68">
+    <img src="plmedia/Pitch  (1)-69.png" alt="Pitch 69">
+    <img src="plmedia/Pitch  (1)-70.png" alt="Pitch 70">
+    <img src="plmedia/Pitch  (1)-71.png" alt="Pitch 71">
   </div>
 
 </body>
