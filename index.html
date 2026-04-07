@@ -199,6 +199,47 @@
     pointer-events: none;
   }
 
+  .bottom-popup {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(728px, calc(100vw - 40px));
+    z-index: 9998;
+    background: transparent;
+  }
+
+  .bottom-popup[hidden] {
+    display: none;
+  }
+
+  .popup-inner {
+    position: relative;
+  }
+
+  .popup-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid #a68a5f;
+    box-sizing: border-box;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #a68a5f;
+    background: #d3ceb4;
+    color: black;
+    font-family: 'Army', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
 </style>
 </head>
 <body>
@@ -295,6 +336,15 @@
     </div>
   </div>
 
+  <div class="bottom-popup" id="bottom-popup">
+    <div class="popup-inner">
+      <div class="popup-banner">
+        <img loading="lazy" decoding="async" src="media/donation_ad.png" alt="Bottom advertisement">
+      </div>
+      <button class="popup-close" type="button" id="close-popup" aria-label="Close advertisement">X</button>
+    </div>
+  </div>
+
   <script>
     function playGrenade() {
       const img = document.getElementById('grenadeImg');
@@ -303,6 +353,13 @@
         img.src = 'media/grenade-frame1.png';
       }, 800);
     }
+
+    const closePopup = document.getElementById('close-popup');
+    const bottomPopup = document.getElementById('bottom-popup');
+
+    closePopup.addEventListener('click', () => {
+      bottomPopup.hidden = true;
+    });
   </script>
 
   <img src="media/warning.png" class="warning-badge" alt="Warning">
