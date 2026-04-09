@@ -12,6 +12,7 @@
       margin: 0;
       font-family: 'ArmyFont', sans-serif;
       color: black;
+      overflow-x: hidden;
     }
 
     .home-button {
@@ -40,16 +41,142 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 20px 90px;
+      box-sizing: border-box;
       text-align: center;
       font-weight: normal;
     }
 
     .page-center h1 {
       font-size: 3em;
-      margin: 0;
+      margin: 0 0 24px;
       font-weight: normal;
+    }
+
+    .meat-copy {
+      max-width: 620px;
+      margin: 0 0 26px;
+      padding: 12px 16px;
+      background: rgba(211, 206, 180, 0.82);
+      border: 2px solid #a68a5f;
+      line-height: 1.35;
+      font-size: 16px;
+    }
+
+    .image-stack {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      width: 100%;
+      align-items: start;
+    }
+
+    .media-item {
+      width: 100%;
+    }
+
+    .meat-image,
+    .meat-video {
+      width: 100%;
+      border: 2px solid #a68a5f;
+      box-sizing: border-box;
+      height: auto;
+      display: block;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .meat-video {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .page-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .page-nav button {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 2px solid #a68a5f;
+      background: #d3ceb4;
+      color: black;
+      font-family: 'ArmyFont', sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-nav .nav-indicator {
+      width: 34px;
+      height: 34px;
+      color: #d3ceb4;
+      font-size: 18px;
+      background: transparent;
+      border-color: #d3ceb4;
+    }
+
+    .page-nav button.active {
+      background: #b09060;
+    }
+
+    .page-status {
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .home-button {
+        position: static;
+        display: block;
+        width: 110px;
+        height: 110px;
+        margin: 16px auto 10px;
+      }
+
+      .page-center {
+        padding: 10px 12px 56px;
+      }
+
+      .page-center h1 {
+        font-size: 36px;
+      }
+
+      .meat-copy {
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+
+      .image-stack {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page-nav {
+        gap: 8px;
+      }
+
+      .page-nav button {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -61,9 +188,195 @@
   </a>
 
   <div class="page-center">
-    <h1>UNDER CONSTRUCTION</h1>
-    <img src="construction.gif" alt="Under Construction">
+    <h1>MEAT</h1>
+
+    <div class="image-stack" id="media-grid"></div>
+    <div class="page-nav" id="page-nav" aria-label="MEAT page navigation"></div>
+    <div class="page-status" id="page-status"></div>
   </div>
+
+  <script>
+    const mediaItems = [
+      'meatmedia/vidgifs/6.mp4',
+      'meatmedia/17.png',
+      'meatmedia/8.png',
+      'meatmedia/vidgifs/GIF 16.gif',
+      'meatmedia/1.png',
+      'meatmedia/vidgifs/GIF 9.gif',
+      'meatmedia/vidgifs/2.gif',
+      'meatmedia/vidgifs/7.mp4',
+      'meatmedia/vidgifs/GIF 4.gif',
+      'meatmedia/vidgifs/12.mp4',
+      'meatmedia/21.png',
+      'meatmedia/vidgifs/GIF 10.gif',
+      'meatmedia/15.png',
+      'meatmedia/vidgifs/14.mp4',
+      'meatmedia/vidgifs/GIF 8.gif',
+      'meatmedia/vidgifs/GIF_13.gif',
+      'meatmedia/9.png',
+      'meatmedia/vidgifs/4.gif',
+      'meatmedia/vidgifs/HOME_GIF.gif',
+      'meatmedia/16.png',
+      'meatmedia/vidgifs/GIF_15.gif',
+      'meatmedia/22.png',
+      'meatmedia/vidgifs/GIF 3_1.gif',
+      'meatmedia/vidgifs/GIF 13.gif',
+      'meatmedia/4.png',
+      'meatmedia/vidgifs/13.mp4',
+      'meatmedia/vidgifs/3.mp4',
+      'meatmedia/vidgifs/GIF 1.gif',
+      'meatmedia/vidgifs/GIF 7.gif',
+      'meatmedia/vidgifs/1.mp4',
+      'meatmedia/5.png',
+      'meatmedia/19.png',
+      'meatmedia/23.png',
+      'meatmedia/6.png',
+      'meatmedia/13.png',
+      'meatmedia/14.png',
+      'meatmedia/18.png',
+      'meatmedia/vidgifs/3.gif',
+      'meatmedia/3.png',
+      'meatmedia/vidgifs/GIF 6.gif',
+      'meatmedia/vidgifs/9.mp4',
+      'meatmedia/10.png',
+      'meatmedia/vidgifs/GIF 11.gif',
+      'meatmedia/vidgifs/GIF_17.gif',
+      'meatmedia/vidgifs/GIF 12.gif',
+      'meatmedia/vidgifs/GIF_14_1.gif',
+      'meatmedia/vidgifs/GIF_16.gif',
+      'meatmedia/11.png',
+      'meatmedia/12.png',
+      'meatmedia/vidgifs/15.mp4',
+      'meatmedia/2.png',
+      'meatmedia/vidgifs/1.gif',
+      'meatmedia/7.png',
+      'meatmedia/vidgifs/8.mp4',
+      'meatmedia/vidgifs/5.mp4',
+      'meatmedia/vidgifs/GIF 5.gif',
+      'meatmedia/vidgifs/GIF 3.gif',
+      'meatmedia/vidgifs/GIF_14.gif',
+      'meatmedia/20.png',
+      'meatmedia/vidgifs/10.mp4',
+      'meatmedia/vidgifs/11.mp4',
+      'meatmedia/vidgifs/2.mpg'
+    ];
+    const itemsPerPage = 10;
+    const totalPages = Math.ceil(mediaItems.length / itemsPerPage);
+    const navWindowSize = 3;
+    const mediaGrid = document.getElementById('media-grid');
+    const pageNav = document.getElementById('page-nav');
+    const pageStatus = document.getElementById('page-status');
+    let currentPage = 1;
+    let navWindowStart = 1;
+
+    function isVideo(path) {
+      return /\.(mp4|mpg|mpeg)$/i.test(path);
+    }
+
+    function createMediaItem(path) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'media-item';
+
+      if (isVideo(path)) {
+        const video = document.createElement('video');
+        video.className = 'meat-video';
+        video.src = path;
+        video.loop = true;
+        video.muted = true;
+        video.playsInline = true;
+        video.controls = true;
+        video.preload = 'metadata';
+        wrapper.appendChild(video);
+      } else {
+        const image = document.createElement('img');
+        image.className = 'meat-image';
+        image.src = path;
+        image.alt = path.split('/').pop();
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        wrapper.appendChild(image);
+      }
+
+      return wrapper;
+    }
+
+    function renderNav() {
+      pageNav.innerHTML = '';
+      const startPage = navWindowStart;
+      const endPage = Math.min(totalPages, startPage + navWindowSize - 1);
+      const maxWindowStart = Math.max(1, totalPages - navWindowSize + 1);
+
+      if (startPage > 1) {
+        const prevButton = document.createElement('button');
+        prevButton.type = 'button';
+        prevButton.className = 'nav-indicator';
+        prevButton.textContent = '<';
+        prevButton.setAttribute('aria-label', 'Previous page group');
+        prevButton.addEventListener('click', () => {
+          navWindowStart = Math.max(1, navWindowStart - navWindowSize);
+          renderNav();
+        });
+        pageNav.appendChild(prevButton);
+      }
+
+      for (let pageNumber = startPage; pageNumber <= endPage; pageNumber += 1) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'page-button';
+        button.dataset.targetPage = String(pageNumber);
+        button.textContent = String(pageNumber);
+        button.classList.toggle('active', pageNumber === currentPage);
+        button.addEventListener('click', () => showPage(pageNumber));
+        pageNav.appendChild(button);
+      }
+
+      if (endPage < totalPages) {
+        const nextButton = document.createElement('button');
+        nextButton.type = 'button';
+        nextButton.className = 'nav-indicator';
+        nextButton.textContent = '>';
+        nextButton.setAttribute('aria-label', 'Next page group');
+        nextButton.addEventListener('click', () => {
+          if (navWindowStart + navWindowSize > totalPages) {
+            navWindowStart = totalPages;
+          } else {
+            navWindowStart = Math.min(maxWindowStart, navWindowStart + navWindowSize);
+          }
+          renderNav();
+        });
+        pageNav.appendChild(nextButton);
+      }
+    }
+
+    function showPage(pageNumber) {
+      currentPage = pageNumber;
+      const currentWindowEnd = Math.min(totalPages, navWindowStart + navWindowSize - 1);
+
+      if (pageNumber === currentWindowEnd && currentWindowEnd < totalPages) {
+        navWindowStart = Math.min(
+          navWindowStart + 1,
+          Math.max(1, totalPages - navWindowSize + 1)
+        );
+      } else if (pageNumber < navWindowStart) {
+        navWindowStart = pageNumber;
+      }
+
+      renderNav();
+      mediaGrid.innerHTML = '';
+
+      const start = (pageNumber - 1) * itemsPerPage;
+      const visibleItems = mediaItems.slice(start, start + itemsPerPage);
+
+      visibleItems.forEach((path) => {
+        mediaGrid.appendChild(createMediaItem(path));
+      });
+      pageStatus.textContent = `Page ${pageNumber} of ${totalPages}`;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    renderNav();
+    showPage(currentPage);
+  </script>
 
 </body>
 </html>

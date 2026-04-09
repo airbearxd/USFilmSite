@@ -90,6 +90,46 @@
       margin-bottom: 35px;
       border: 2px solid #a68a5f;
     }
+
+    @media (max-width: 900px) {
+      html, body {
+        height: auto;
+        background-attachment: scroll;
+      }
+
+      .home-button {
+        position: static;
+        display: block;
+        width: 110px;
+        height: 110px;
+        margin: 16px auto 10px;
+      }
+
+      .page-center {
+        padding: 10px 12px 56px;
+        box-sizing: border-box;
+      }
+
+      .page-center h1 {
+        font-size: 38px;
+        margin-bottom: 18px;
+      }
+
+      .page-center h2 {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+
+      .page-center p {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+
+      .page-center video,
+      .page-center img {
+        margin-bottom: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -105,7 +145,7 @@
     <h2>SYLVIA VIDEO</h2>
 
     <!-- Video -->
-    <video src="plmedia/sylviavideo.mp4" controls autoplay loop unmuted></video>
+    <video src="plmedia/sylviavideo.mp4" controls loop unmuted></video>
 
     <!-- Images -->
     <img src="plmedia/Pitch  (1)-67.png" alt="Pitch 67">
